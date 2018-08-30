@@ -18,7 +18,7 @@ type Upstreams struct {
 var upstreams = []Upstreams{
 	{
 		RelativePath: "/GET/200",
-		Host:         "localhost",
+		Host:         "http_test_server", // or localhost if not running with Docker
 		Port:         9980,
 	},
 	{
