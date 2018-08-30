@@ -1,0 +1,17 @@
+version: '2.1'
+services:
+  http_test_server: # Simple HTTP server to test the proxy
+    container_name: "http_test_server"
+    build:
+      context: "./http_server"
+    ports:
+      - 9980:9980
+    restart: always
+
+  proxy:  # Proxy example
+    container_name: "http_proxy"
+    build:
+      context: .
+    ports:
+      - 8000:8000
+    restart: always
